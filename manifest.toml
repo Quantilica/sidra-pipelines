@@ -1,0 +1,87 @@
+name        = "Sidra Standard Pipelines"
+description = "Pipelines oficiais de referência para o motor sidra-sql, cobrindo PIB, População, Inflação e Agropecuária."
+version     = "1.0.0"
+
+[[pipeline]]
+id          = "pib_municipal"
+description = "PIB dos Municípios"
+fetch       = "pib_munic/fetch.toml"
+transform   = "pib_munic/transform.toml"
+
+[[pipeline]]
+id          = "ipca"
+description = "IPCA - Índice Nacional de Preços ao Consumidor Amplo"
+fetch       = "snpc/ipca/fetch.toml"
+transform   = "snpc/ipca/transform.toml"
+
+[[pipeline]]
+id          = "ipca15"
+description = "IPCA-15 - Índice Nacional de Preços ao Consumidor Amplo 15"
+fetch       = "snpc/ipca15/fetch.toml"
+transform   = "snpc/ipca15/transform.toml"
+
+[[pipeline]]
+id          = "inpc"
+description = "INPC - Índice Nacional de Preços ao Consumidor"
+fetch       = "snpc/inpc/fetch.toml"
+transform   = "snpc/inpc/transform.toml"
+
+[[pipeline]]
+id          = "censo_populacao"
+description = "Censo Demográfico"
+fetch       = "populacao/censo_populacao/fetch.toml"
+transform   = "populacao/censo_populacao/transform.toml"
+
+[[pipeline]]
+id          = "contagem_populacao"
+description = "Contagem da População"
+fetch       = "populacao/contagem_populacao/fetch.toml"
+transform   = "populacao/contagem_populacao/transform.toml"
+
+[[pipeline]]
+id          = "estimativa_populacao"
+description = "Estimativas de População"
+fetch       = "populacao/estimapop/fetch.toml"
+transform   = "populacao/estimapop/transform.toml"
+
+[[pipeline]]
+id          = "pam_lavouras_temporarias"
+description = "PAM - Produção Agrícola Municipal (Lavouras Temporárias)"
+fetch       = "pam/lavouras_temporarias/fetch.toml"
+transform   = "pam/lavouras_temporarias/transform.toml"
+
+[[pipeline]]
+id          = "pam_lavouras_permanentes"
+description = "PAM - Produção Agrícola Municipal (Lavouras Permanentes)"
+fetch       = "pam/lavouras_permanentes/fetch.toml"
+transform   = "pam/lavouras_permanentes/transform.toml"
+
+[[pipeline]]
+id          = "ppm_rebanhos"
+description = "PPM - Pesquisa Pecuária Municipal (Efetivos dos Rebanhos)"
+fetch       = "ppm/rebanhos/fetch.toml"
+transform   = "ppm/rebanhos/transform.toml"
+
+[[pipeline]]
+id          = "ppm_producao"
+description = "PPM - Pesquisa Pecuária Municipal (Produção de Origem Animal)"
+fetch       = "ppm/producao/fetch.toml"
+transform   = "ppm/producao/transform.toml"
+
+[[pipeline]]
+id          = "ppm_exploracao"
+description = "PPM - Pesquisa Pecuária Municipal (Aquicultura e Exploração Animal)"
+fetch       = "ppm/exploracao/fetch.toml"
+transform   = "ppm/exploracao/transform.toml"
+
+[[pipeline]]
+id          = "pevs_producao"
+description = "PEVS - Produção da Extração Vegetal e da Silvicultura"
+fetch       = "pevs/producao/fetch.toml"
+transform   = "pevs/producao/transform.toml"
+
+[[pipeline]]
+id          = "pevs_area_florestal"
+description = "PEVS - Área de Florestas Plantadas"
+fetch       = "pevs/area_florestal/fetch.toml"
+transform   = "pevs/area_florestal/transform.toml"
