@@ -1,0 +1,5 @@
+[table]
+name        = "ipp_categoria_economica"
+schema      = "analytics"
+strategy    = "replace"
+description = "IPP por Grandes Categorias Econômicas"

@@ -8,6 +8,11 @@ description = "PIB dos Municípios"
 path        = "pib_munic"
 
 [[pipeline]]
+id          = "ipp_categoria_economica"
+description = "IPP por Grandes Categorias Econômicas"
+path        = "precos/ipp/ipp_categoria_economica"
+
+[[pipeline]]
 id          = "ipca"
 description = "IPCA - Índice Nacional de Preços ao Consumidor Amplo"
 path        = "precos/snipc/ipca"
