@@ -18,6 +18,11 @@ description = "IPP da indústria geral, indústrias extrativas e indústrias de 
 path        = "precos/ipp/ipp_cnae"
 
 [[pipeline]]
+id          = "ipp_grupo_industrial"
+description = "IPP por Grupos Industriais selecionados"
+path        = "precos/ipp/ipp_grupo_industrial"
+
+[[pipeline]]
 id          = "ipca"
 description = "IPCA - Índice Nacional de Preços ao Consumidor Amplo"
 path        = "precos/snipc/ipca"

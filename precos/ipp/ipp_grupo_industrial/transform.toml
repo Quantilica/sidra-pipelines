@@ -1,0 +1,5 @@
+[table]
+name        = "ipp_grupo_industrial"
+schema      = "analytics"
+strategy    = "replace"
+description = "IPP por Grupos Industriais selecionados"

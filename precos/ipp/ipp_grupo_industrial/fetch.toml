@@ -1,0 +1,6 @@
+# Tabela 6723 - Índice de Preços ao Produtor, por tipo de índice e grupos industriais selecionados (dezembro de 2018 = 100) 
+[[tabelas]]
+sidra_tabela = "6723"
+variables = ["all"]
+territories = {1 = []}
+classifications = {844 = []}
