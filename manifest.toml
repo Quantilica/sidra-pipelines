@@ -45,34 +45,34 @@ path        = "populacao"
 [[pipeline]]
 id          = "pam_lavouras_temporarias"
 description = "PAM - Produção Agrícola Municipal (Lavouras Temporárias)"
-path        = "pam/lavouras_temporarias"
+path        = "agropecuaria/pam/lavouras_temporarias"
 
 [[pipeline]]
 id          = "pam_lavouras_permanentes"
 description = "PAM - Produção Agrícola Municipal (Lavouras Permanentes)"
-path        = "pam/lavouras_permanentes"
+path        = "agropecuaria/pam/lavouras_permanentes"
 
 [[pipeline]]
 id          = "ppm_rebanhos"
 description = "PPM - Pesquisa Pecuária Municipal (Efetivos dos Rebanhos)"
-path        = "ppm/rebanhos"
+path        = "agropecuaria/ppm/rebanhos"
 
 [[pipeline]]
 id          = "ppm_producao"
 description = "PPM - Pesquisa Pecuária Municipal (Produção de Origem Animal)"
-path        = "ppm/producao"
+path        = "agropecuaria/ppm/producao"
 
 [[pipeline]]
 id          = "ppm_exploracao"
 description = "PPM - Pesquisa Pecuária Municipal (Aquicultura e Exploração Animal)"
-path        = "ppm/exploracao"
+path        = "agropecuaria/ppm/exploracao"
 
 [[pipeline]]
 id          = "pevs_producao"
 description = "PEVS - Produção da Extração Vegetal e da Silvicultura"
-path        = "pevs/producao"
+path        = "agropecuaria/pevs/producao"
 
 [[pipeline]]
 id          = "pevs_area_florestal"
 description = "PEVS - Área de Florestas Plantadas"
-path        = "pevs/area_florestal"
+path        = "agropecuaria/pevs/area_florestal"
