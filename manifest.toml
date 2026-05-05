@@ -10,17 +10,17 @@ path        = "pib_munic"
 [[pipeline]]
 id          = "ipca"
 description = "IPCA - Índice Nacional de Preços ao Consumidor Amplo"
-path        = "snpc/ipca"
+path        = "precos/snipc/ipca"
 
 [[pipeline]]
 id          = "ipca15"
 description = "IPCA-15 - Índice Nacional de Preços ao Consumidor Amplo 15"
-path        = "snpc/ipca15"
+path        = "precos/snipc/ipca15"
 
 [[pipeline]]
 id          = "inpc"
 description = "INPC - Índice Nacional de Preços ao Consumidor"
-path        = "snpc/inpc"
+path        = "precos/snipc/inpc"
 
 [[pipeline]]
 id          = "censo_populacao"
