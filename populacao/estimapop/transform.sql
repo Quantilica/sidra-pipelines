@@ -1,6 +1,7 @@
 SELECT
     p.ano                                                   AS ano,
     l.d1c                                                   AS id_municipio,
+    l.d1n                                                   AS nome_municipio,
     CASE WHEN d.v ~ '^-?[0-9]' THEN d.v::numeric END       AS n_pessoas
 FROM dados d
 JOIN periodo    p   ON d.periodo_id    = p.id
