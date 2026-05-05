@@ -1,0 +1,5 @@
+[table]
+name        = "ipp_cnae"
+schema      = "analytics"
+strategy    = "replace"
+description = "IPP da indústria geral, indústrias extrativas e indústrias de transformação e atividades"

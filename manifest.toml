@@ -13,6 +13,11 @@ description = "IPP por Grandes Categorias Econômicas"
 path        = "precos/ipp/ipp_categoria_economica"
 
 [[pipeline]]
+id          = "ipp_cnae"
+description = "IPP da indústria geral, indústrias extrativas e indústrias de transformação e atividades"
+path        = "precos/ipp/ipp_cnae"
+
+[[pipeline]]
 id          = "ipca"
 description = "IPCA - Índice Nacional de Preços ao Consumidor Amplo"
 path        = "precos/snipc/ipca"
