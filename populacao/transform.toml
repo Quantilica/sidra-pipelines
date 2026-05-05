@@ -1,0 +1,5 @@
+[table]
+name        = "populacao"
+schema      = "analytics"
+strategy    = "replace"
+description = "União de censo, contagem e estimativas de população municipal"
