@@ -5,7 +5,7 @@ version     = "1.1.0"
 [[pipeline]]
 id          = "pib_municipal"
 description = "PIB dos Municípios"
-path        = "pib_munic"
+path        = "contas_nacionais/pib_municipal"
 
 [[pipeline]]
 id          = "ipp_categoria_economica"
