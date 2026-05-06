@@ -1,0 +1,12 @@
+# Sistema Nacional de Pesquisa de Custos e Índices da Construção Civil - SINAPI
+# https://sidra.ibge.gov.br/pesquisa/sinapi/tabelas
+
+# Tabela 647 - Custo de projeto m², por tipo de projeto e padrão de acabamento
+# Notas:
+# 1 - Ver moedas correntes e datas-base das séries em http://www.ibge.gov.br/home/estatistica/indicadores/precos/sinapi/seriescustind.shtm
+# 2 - Para obter outros dados sobre o SINAPI consulte a Caixa Econômica Federal no endereço http://www1.caixa.gov.br/gov/gov_social/municipal/programa_des_urbano/SINAPI/index.asp
+# Fonte: IBGE - Sistema Nacional de Pesquisa de Custos e Índices da Construção Civil
+[[tabelas]]
+sidra_tabela = "647"
+variables = ["all"]
+territories = {3 = []}

@@ -28,6 +28,11 @@ description = "SINAPI - Custo médio m²"
 path        = "precos/sinapi/custo_medio"
 
 [[pipeline]]
+id          = "sinapi_custo_projeto"
+description = "SINAPI - Custo de projeto"
+path        = "precos/sinapi/custo_projeto"
+
+[[pipeline]]
 id          = "ipca"
 description = "IPCA - Índice Nacional de Preços ao Consumidor Amplo"
 path        = "precos/snipc/ipca"
