@@ -1,0 +1,39 @@
+# Sistema Nacional de Pesquisa de Custos e Índices da Construção Civil - SINAPI
+# https://sidra.ibge.gov.br/pesquisa/sinapi/tabelas
+
+# Tabela 2296 - Custo médio m² em moeda corrente e variações percentuais no mês, no ano e em doze meses
+# Notas:
+# 1 - A variável Custo médio m² - número índice utiliza como base junho/94 = 100;
+# 2 - Série de custos (moedas):
+# Devido aos vários planos econômicos que resultaram em mudança da moeda, as séries de custos do SINAPI estão expressas da seguinte forma:
+# março de 1986 à dezembro de 1988: Cz$ (cruzado);
+# janeiro de 1989 à março de 1990: NCz$ (cruzado novo);
+# abril de 1990 à julho de 1993: CR$ (cruzeiro);
+# agosto de 1993 à junho de 1994: CR$ (cruzeiro real);
+# julho de 1994 em diante: R$ (real).
+# 3 - A partir de janeiro de 2011, o custo nacional do SINAPI e os custos relativos às Regiões são calculados com uma nova estrutura de ponderação (número de domicílios com banheiro da PNAD 2009 em relação à PNAD 2004).
+# Por isso, não devem ser comparados com os resultados anteriores que foram obtidos com outra estrutura de ponderação (crescimento populacional resultante do Censo Demográfico).
+# 4 - Os resultados de maio de 2013 refletem a desoneração da folha de pagamento de empresas do setor da construção civil, em vigor desde primeiro de abril deste ano. A desoneração foi regulamentada através da medida provisória nº 601, de 28 de dezembro de 2012, tratando do cálculo dos encargos sociais, que retirou os 20% relativos à contribuição previdenciária incidente na folha de pagamento.
+# Os resultados do mês junho de 2013 refletem o retorno da contribuição previdenciária sobre a folha de pagamento de empresas do setor da construção civil, que havia vigorado nos meses de abril e maio. A desoneração, vigente a partir de primeiro de abril, teve seus efeitos interrompidos em 03 de junho em função da perda de validade da medida provisória que a criou, a MP 601/12, de 28 de dezembro de 2012. Entre outros aspectos, a medida tratou de retirar os 20% da contribuição previdenciária incidente sobre o setor, o que se refletiu integralmente no mês de maio.
+# Os resultados a partir de julho de 2013 refletem a lei 12.844, sancionada em 19 de julho de 2013, que estabelece, entre outras disposições, a desoneração da folha de pagamento retirando do cálculo dos encargos sociais, os 20% relativos à contribuição previdenciária incidente na folha de pagamento. Continuam sendo parte da divulgação, no site do IBGE, os índices e custos que não levam em consideração desoneração da folha de pagamento.
+# 5 - Para obter outros dados sobre o SINAPI consulte a Caixa Econômica Federal no endereço http://www1.caixa.gov.br/gov/gov_social/municipal/programa_des_urbano/SINAPI/index.asp
+# Fonte: IBGE - Sistema Nacional de Pesquisa de Custos e Índices da Construção Civil
+[[tabelas]]
+sidra_tabela = "2296"
+variables = ["all"]
+territories = {1 = [], 2 = [], 3 = []}
+
+# Tabela 6586 - Custo médio m² em moeda corrente e variações percentuais no mês, no ano e em doze meses, sem desoneração da folha de pagamento
+# Notas:
+# 1 - A variável Custo médio m² - número índice utiliza como base junho/94 = 100;
+# 2 - A partir de janeiro de 2011, o custo nacional do SINAPI e os custos relativos às Regiões são calculados com uma nova estrutura de ponderação (número de domicílios com banheiro da PNAD 2009 em relação à PNAD 2004).
+# Por isso, não devem ser comparados com os resultados anteriores que foram obtidos com outra estrutura de ponderação (crescimento populacional resultante do Censo Demográfico).
+# 3 - Os resultados de maio de 2013 refletem a desoneração da folha de pagamento de empresas do setor da construção civil, em vigor desde primeiro de abril deste ano. A desoneração foi regulamentada através da medida provisória nº 601, de 28 de dezembro de 2012, tratando do cálculo dos encargos sociais, que retirou os 20% relativos à contribuição previdenciária incidente na folha de pagamento.
+# Os resultados do mês junho de 2013 refletem o retorno da contribuição previdenciária sobre a folha de pagamento de empresas do setor da construção civil, que havia vigorado nos meses de abril e maio. A desoneração, vigente a partir de primeiro de abril, teve seus efeitos interrompidos em 03 de junho em função da perda de validade da medida provisória que a criou, a MP 601/12, de 28 de dezembro de 2012. Entre outros aspectos, a medida tratou de retirar os 20% da contribuição previdenciária incidente sobre o setor, o que se refletiu integralmente no mês de maio.
+# Os resultados a partir de julho de 2013 refletem a lei 12.844, sancionada em 19 de julho de 2013, que estabelece, entre outras disposições, a desoneração da folha de pagamento retirando do cálculo dos encargos sociais, os 20% relativos à contribuição previdenciária incidente na folha de pagamento. Continuam sendo parte da divulgação, no site do IBGE, os índices e custos que não levam em consideração desoneração da folha de pagamento.
+# 4 - Para obter outros dados sobre o SINAPI consulte a Caixa Econômica Federal no endereço http://www1.caixa.gov.br/gov/gov_social/municipal/programa_des_urbano/SINAPI/index.asp
+# Fonte: IBGE - Sistema Nacional de Pesquisa de Custos e Índices da Construção Civil
+[[tabelas]]
+sidra_tabela = "6586"
+variables = ["all"]
+territories = {1 = [], 2 = [], 3 = []}

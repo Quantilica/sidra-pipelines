@@ -23,6 +23,11 @@ description = "IPP por Grupos Industriais selecionados"
 path        = "precos/ipp/ipp_grupo_industrial"
 
 [[pipeline]]
+id          = "sinapi_custo_medio"
+description = "SINAPI - Custo médio m²"
+path        = "precos/sinapi/custo_medio"
+
+[[pipeline]]
 id          = "ipca"
 description = "IPCA - Índice Nacional de Preços ao Consumidor Amplo"
 path        = "precos/snipc/ipca"

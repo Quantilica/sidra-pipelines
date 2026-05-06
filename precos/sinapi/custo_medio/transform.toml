@@ -1,0 +1,5 @@
+[table]
+name        = "sinapi_custo_medio"
+schema      = "analytics"
+strategy    = "replace"
+description = "SINAPI - Custo médio m²"
