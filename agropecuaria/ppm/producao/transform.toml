@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "ppm_producao"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "PPM - produção de origem animal por tipo de produto e município"

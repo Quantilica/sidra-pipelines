@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "sinapi_custo_medio"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "SINAPI - Custo médio m²"

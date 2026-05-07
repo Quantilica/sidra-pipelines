@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "ipp_categoria_economica"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "IPP por Grandes Categorias Econômicas"

@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "populacao"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "União de censo, contagem e estimativas de população municipal"

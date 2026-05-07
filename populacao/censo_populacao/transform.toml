@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "censo_populacao"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "Censo Demográfico - população residente por sexo, situação e grupo de idade"

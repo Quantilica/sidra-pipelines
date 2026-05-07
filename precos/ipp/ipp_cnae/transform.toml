@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "ipp_cnae"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "IPP da indústria geral, indústrias extrativas e indústrias de transformação e atividades"

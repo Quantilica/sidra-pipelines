@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "contagem_populacao"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "Contagem da População - população residente por município"

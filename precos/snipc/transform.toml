@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "inflacao"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "União de INPC, IPCA e IPCA-15"

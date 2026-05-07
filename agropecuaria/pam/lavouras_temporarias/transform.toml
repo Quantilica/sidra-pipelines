@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "pam_lavouras_temporarias"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "PAM - área, produção, rendimento e valor das lavouras temporárias"

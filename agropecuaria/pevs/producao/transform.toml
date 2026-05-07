@@ -1,5 +1,6 @@
-[table]
+[[table]]
 name        = "pevs_producao"
 schema      = "analytics"
 strategy    = "replace"
+sql         = "transform.sql"
 description = "PEVS - produção da extração vegetal e silvicultura por tipo de produto"
