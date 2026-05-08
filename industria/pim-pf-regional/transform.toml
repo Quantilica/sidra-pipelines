@@ -1,0 +1,6 @@
+[[table]]
+name        = "pim_pf_regional"
+schema      = "analytics"
+strategy    = "replace"
+sql         = "transform.sql"
+description = "PIM-PF Regional"
