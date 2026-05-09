@@ -3,6 +3,6 @@
 
 # Tabela 7524 - Número de informantes, Número de galinhas poedeiras e Quantidade de ovos produzidos, no mês e no trimestre
 [[tabelas]]
-sidra_tabela = "7524"
+tabela_sidra = "7524"
 variables = ["all"]
 territories = {3 = []}

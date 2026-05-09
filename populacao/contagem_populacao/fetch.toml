@@ -4,12 +4,12 @@
 # Tabela 305 - População residente em domicílios particulares permanentes por
 #              sexo do chefe do domicílio e situação
 [[tabelas]]
-sidra_tabela = "305"
+tabela_sidra = "305"
 variables = ["allxp"]
 territories = {6 = ["all"]}
 classifications = {293 = ["0"], 1 = ["0"]}
 
 # Tabela 793 - População residente
 [[tabelas]]
-sidra_tabela = "793"
+tabela_sidra = "793"
 territories = {6 = ["all"]}

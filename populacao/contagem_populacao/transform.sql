@@ -1,11 +1,15 @@
 SELECT
-    p.ano                                                   AS ano,
-    l.d1c                                                   AS id_municipio,
-    l.d1n                                                   AS nome_municipio,
-    CASE WHEN d.v ~ '^-?[0-9]' THEN d.v::numeric END       AS n_pessoas
-FROM dados d
-JOIN periodo    p   ON d.periodo_id    = p.id
-JOIN dimensao   dim ON d.dimensao_id   = dim.id
-JOIN localidade l   ON d.localidade_id = l.id
-WHERE d.sidra_tabela_id IN ('305', '793')
-  AND d.ativo = true
+	P.ANO AS ANO,
+	L.D1C AS ID_MUNICIPIO,
+	L.D1N AS NOME_MUNICIPIO,
+	CASE
+		WHEN D.V ~ '^-?[0-9]' THEN D.V::NUMERIC
+	END AS N_PESSOAS
+FROM
+	DADOS D
+	JOIN PERIODO P ON D.PERIODO_ID = P.ID
+	JOIN DIMENSAO DIM ON D.DIMENSAO_ID = DIM.ID
+	JOIN LOCALIDADE L ON D.LOCALIDADE_ID = L.ID
+WHERE
+	D.TABELA_SIDRA_ID IN ('305', '793')
+	AND D.ATIVO = TRUE

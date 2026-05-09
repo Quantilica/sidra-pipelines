@@ -19,8 +19,7 @@ WITH
 			JOIN DIMENSAO DIM ON D.DIMENSAO_ID = DIM.ID
 			JOIN LOCALIDADE L ON D.LOCALIDADE_ID = L.ID
 		WHERE
-			1 = 1
-			AND D.SIDRA_TABELA_ID = '6903'
+			D.TABELA_SIDRA_ID = '6903'
 			AND D.ATIVO = TRUE
 	)
 SELECT
@@ -31,10 +30,9 @@ SELECT
 	LOCALIDADE,
 	SETOR_ID,
 	SETOR,
-	SUM(
+	MAX(
 		CASE
 			WHEN VARIAVEL = 'IPP - Número-índice (dezembro de 2018 = 100)' THEN VALOR
-			ELSE 0
 		END
 	) AS IPP_NUMERO_INDICE,
 	MAX(
@@ -42,10 +40,9 @@ SELECT
 			WHEN VARIAVEL = 'IPP - Número-índice (dezembro de 2018 = 100)' THEN UNIDADE
 		END
 	) AS IPP_NUMERO_INDICE_UNIDADE,
-	SUM(
+	MAX(
 		CASE
 			WHEN VARIAVEL = 'IPP - Variação acumulada no ano (em relação a dezembro do ano anterior)' THEN VALOR
-			ELSE 0
 		END
 	) AS IPP_VARIACAO_ACUMULADA_ANO,
 	MAX(
@@ -53,10 +50,9 @@ SELECT
 			WHEN VARIAVEL = 'IPP - Variação acumulada no ano (em relação a dezembro do ano anterior)' THEN UNIDADE
 		END
 	) AS IPP_VARIACAO_ACUMULADA_ANO_UNIDADE,
-	SUM(
+	MAX(
 		CASE
 			WHEN VARIAVEL = 'IPP - Variação mês/mês imediatamente anterior (M/M-1)' THEN VALOR
-			ELSE 0
 		END
 	) AS IPP_VARIACAO_MES_MES_ANTERIOR,
 	MAX(
@@ -64,10 +60,9 @@ SELECT
 			WHEN VARIAVEL = 'IPP - Variação mês/mês imediatamente anterior (M/M-1)' THEN UNIDADE
 		END
 	) AS IPP_VARIACAO_MES_MES_ANTERIOR_UNIDADE,
-	SUM(
+	MAX(
 		CASE
 			WHEN VARIAVEL = 'IPP - Variação mês/mesmo mês do ano anterior (M/M-12)' THEN VALOR
-			ELSE 0
 		END
 	) AS IPP_VARIACAO_MES_ANO_ANTERIOR,
 	MAX(

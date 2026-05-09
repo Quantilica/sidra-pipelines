@@ -1,27 +1,26 @@
 SELECT
-    'censo'      AS fonte,
-    ano,
-    id_municipio,
-    nome_municipio,
-    n_pessoas
-FROM analytics.censo_populacao
-
+	'censo' AS FONTE,
+	ANO,
+	ID_MUNICIPIO,
+	NOME_MUNICIPIO,
+	N_PESSOAS
+FROM
+	ANALYTICS.CENSO_POPULACAO
 UNION ALL
-
 SELECT
-    'contagem'   AS fonte,
-    ano,
-    id_municipio,
-    nome_municipio,
-    n_pessoas
-FROM analytics.contagem_populacao
-
+	'contagem' AS FONTE,
+	ANO,
+	ID_MUNICIPIO,
+	NOME_MUNICIPIO,
+	N_PESSOAS
+FROM
+	ANALYTICS.CONTAGEM_POPULACAO
 UNION ALL
-
 SELECT
-    'estimativa' AS fonte,
-    ano,
-    id_municipio,
-    nome_municipio,
-    n_pessoas
-FROM analytics.estimativa_populacao
+	'estimativa' AS FONTE,
+	ANO,
+	ID_MUNICIPIO,
+	NOME_MUNICIPIO,
+	N_PESSOAS
+FROM
+	ANALYTICS.ESTIMATIVA_POPULACAO;

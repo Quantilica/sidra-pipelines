@@ -1,16 +1,16 @@
-# Pesquisa da Pecuária Municipal - Aquicultura e Exploração
+# Pesquisa da Pecuária Municipal - Aquicultura e Exploração Animal
 # https://sidra.ibge.gov.br/pesquisa/ppm/tabelas
 
-# Tabela 94 - Aquicultura - Quantidade produzida e valor da produção,
-#             por tipo de produto
+# Tabela 94 - Vacas ordenhadas e quantidade de leite produzida,
+#             por tipo de estabelecimento
 [[tabelas]]
-sidra_tabela = "94"
+tabela_sidra = "94"
 variables = ["allxp"]
 territories = {6 = []}
 
-# Tabela 95 - Aquicultura - Quantidade de estabelecimentos que praticam
-#             aquicultura e área dos tanques/viveiros
+# Tabela 95 - Ovinos tosquiados nos estabelecimentos agropecuários
+#             e quantidade de lã produzida
 [[tabelas]]
-sidra_tabela = "95"
+tabela_sidra = "95"
 variables = ["allxp"]
 territories = {6 = []}

@@ -3,6 +3,6 @@
 
 # Tabela 1086 - Número de informantes e Quantidade de leite cru, resfriado ou não, adquirido e industrializado, no mês e no trimestre, por tipo de inspeção
 [[tabelas]]
-sidra_tabela = "1086"
+tabela_sidra = "1086"
 variables = ["all"]
 territories = {3 = []}

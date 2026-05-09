@@ -1,13 +1,16 @@
 SELECT
-    p.ano                                                   AS ano,
-    l.d1c                                                   AS id_municipio,
-    dim.d4n                                                 AS tipo_rebanho,
-    dim.d2n                                                 AS variavel,
-    dim.mn                                                  AS unidade,
-    CASE WHEN d.v ~ '^-?[0-9]' THEN d.v::numeric END       AS valor
-FROM dados d
-JOIN periodo    p   ON d.periodo_id    = p.id
-JOIN dimensao   dim ON d.dimensao_id   = dim.id
-JOIN localidade l   ON d.localidade_id = l.id
-WHERE d.sidra_tabela_id IN ('73', '3939')
-  AND d.ativo = true
+	P.ANO AS ANO,
+	L.D1C AS ID_MUNICIPIO,
+	L.D1N AS NOME_MUNICIPIO,
+	DIM.D4N AS TIPO_REBANHO,
+	CASE
+		WHEN D.V ~ '^-?[0-9]' THEN D.V::NUMERIC
+	END AS EFETIVO_REBANHOS
+FROM
+	DADOS D
+	JOIN PERIODO P ON D.PERIODO_ID = P.ID
+	JOIN DIMENSAO DIM ON D.DIMENSAO_ID = DIM.ID
+	JOIN LOCALIDADE L ON D.LOCALIDADE_ID = L.ID
+WHERE
+	D.TABELA_SIDRA_ID IN ('73', '3939')
+	AND D.ATIVO = TRUE

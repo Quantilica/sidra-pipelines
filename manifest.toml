@@ -1,6 +1,6 @@
 name        = "Sidra Standard Pipelines"
-description = "Pipelines oficiais de referência para o motor sidra-sql, cobrindo PIB, População, Inflação e Agropecuária."
-version     = "1.1.0"
+description = "Pipelines oficiais de referência para o motor sidra-sql, cobrindo Contas Nacionais, Preços, Indústria, Comércio, Serviços, Trabalho, Agropecuária e Florestal."
+version     = "2.0.0"
 
 [[pipeline]]
 id          = "pib_municipal"
@@ -89,7 +89,7 @@ path        = "agropecuaria/ppm/producao"
 
 [[pipeline]]
 id          = "ppm_exploracao"
-description = "PPM - Pesquisa Pecuária Municipal (Aquicultura e Exploração Animal)"
+description = "PPM - Pesquisa Pecuária Municipal (Vacas Ordenhadas e Ovinos Tosquiados)"
 path        = "agropecuaria/ppm/exploracao"
 
 [[pipeline]]
@@ -101,3 +101,68 @@ path        = "agropecuaria/pevs/producao"
 id          = "pevs_area_florestal"
 description = "PEVS - Área de Florestas Plantadas"
 path        = "agropecuaria/pevs/area_florestal"
+
+[[pipeline]]
+id          = "abate"
+description = "Abate - Bovinos, Suínos e Frangos Abatidos"
+path        = "agropecuaria/abate"
+
+[[pipeline]]
+id          = "leite"
+description = "Pesquisa Trimestral do Leite"
+path        = "agropecuaria/leite"
+
+[[pipeline]]
+id          = "couro"
+description = "Pesquisa Trimestral do Couro"
+path        = "agropecuaria/couro"
+
+[[pipeline]]
+id          = "pog"
+description = "POG - Pesquisa da Avicultura de Postura (Galinhas Poedeiras e Ovos)"
+path        = "agropecuaria/pog"
+
+[[pipeline]]
+id          = "lspa"
+description = "LSPA - Levantamento Sistemático da Produção Agrícola"
+path        = "agropecuaria/lspa"
+
+[[pipeline]]
+id          = "estoques"
+description = "Pesquisa de Estoques de Grãos"
+path        = "agropecuaria/estoques"
+
+[[pipeline]]
+id          = "contas_nacionais_anual"
+description = "Contas Nacionais Anuais (PIB, PIB per capita e deflator)"
+path        = "contas_nacionais/anual"
+
+[[pipeline]]
+id          = "contas_nacionais_trimestral"
+description = "Contas Nacionais Trimestrais (CNT)"
+path        = "contas_nacionais/trimestral"
+
+[[pipeline]]
+id          = "pim_pf_brasil"
+description = "PIM-PF Brasil - Produção Física Industrial Nacional"
+path        = "industria/pim-pf-brasil"
+
+[[pipeline]]
+id          = "pim_pf_regional"
+description = "PIM-PF Regional - Produção Física Industrial por Região"
+path        = "industria/pim-pf-regional"
+
+[[pipeline]]
+id          = "pmc"
+description = "PMC - Pesquisa Mensal do Comércio"
+path        = "pmc"
+
+[[pipeline]]
+id          = "pms"
+description = "PMS - Pesquisa Mensal de Serviços"
+path        = "pms"
+
+[[pipeline]]
+id          = "pnadcm"
+description = "PNAD Contínua Mensal - Mercado de Trabalho"
+path        = "trabalho/pnadcm"

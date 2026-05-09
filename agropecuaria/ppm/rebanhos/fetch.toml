@@ -3,14 +3,14 @@
 
 # Tabela 73 - Efetivo dos rebanhos, por tipo de rebanho
 [[tabelas]]
-sidra_tabela = "73"
+tabela_sidra = "73"
 variables = ["allxp"]
 territories = {6 = []}
 unnest_classifications = true
 
 # Tabela 3939 - Efetivo dos rebanhos, por tipo de rebanho (série histórica)
 [[tabelas]]
-sidra_tabela = "3939"
+tabela_sidra = "3939"
 variables = ["allxp"]
 territories = {6 = []}
 unnest_classifications = true

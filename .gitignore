@@ -1,2 +1,5 @@
 *.ini
 *.log
+.pgpass
+.claude/
+.eval/

@@ -4,7 +4,7 @@
 # Tabela 289 - Quantidade produzida e valor da produção na extração vegetal,
 #              por tipo de produto extrativo
 [[tabelas]]
-sidra_tabela = "289"
+tabela_sidra = "289"
 variables = ["allxp"]
 territories = {6 = []}
 unnest_classifications = true
@@ -12,7 +12,7 @@ unnest_classifications = true
 # Tabela 291 - Quantidade produzida e valor da produção na silvicultura,
 #              por tipo de produto da silvicultura
 [[tabelas]]
-sidra_tabela = "291"
+tabela_sidra = "291"
 variables = ["allxp"]
 territories = {6 = []}
 unnest_classifications = true

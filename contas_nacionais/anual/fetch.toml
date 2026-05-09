@@ -3,5 +3,5 @@
 
 # Tabela 6784 - Produto Interno Bruto, Produto Interno Bruto per capita, População residente e Deflator
 [[tabelas]]
-sidra_tabela = "6784"
+tabela_sidra = "6784"
 territories = {1 = []}

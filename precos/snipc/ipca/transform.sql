@@ -21,7 +21,7 @@ WITH
 			JOIN DIMENSAO DIM ON D.DIMENSAO_ID = DIM.ID
 			JOIN LOCALIDADE L ON D.LOCALIDADE_ID = L.ID
 		WHERE
-			D.SIDRA_TABELA_ID IN (
+			D.tabela_sidra_ID IN (
 				'1692',
 				'1693', -- jul/1989 - dez/1990
 				'58',

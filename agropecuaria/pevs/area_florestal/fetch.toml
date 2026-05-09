@@ -4,7 +4,7 @@
 # Tabela 5930 - Área total dos estabelecimentos agropecuários (ha) com
 #               florestas plantadas, por tipo de floresta
 [[tabelas]]
-sidra_tabela = "5930"
+tabela_sidra = "5930"
 variables = ["allxp"]
 territories = {6 = []}
 classifications = {734 = ["allxt"]}

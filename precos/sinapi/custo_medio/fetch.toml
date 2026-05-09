@@ -19,7 +19,7 @@
 # 5 - Para obter outros dados sobre o SINAPI consulte a Caixa Econômica Federal no endereço http://www1.caixa.gov.br/gov/gov_social/municipal/programa_des_urbano/SINAPI/index.asp
 # Fonte: IBGE - Sistema Nacional de Pesquisa de Custos e Índices da Construção Civil
 [[tabelas]]
-sidra_tabela = "2296"
+tabela_sidra = "2296"
 variables = ["all"]
 territories = {1 = [], 2 = [], 3 = []}
 
@@ -34,6 +34,6 @@ territories = {1 = [], 2 = [], 3 = []}
 # 4 - Para obter outros dados sobre o SINAPI consulte a Caixa Econômica Federal no endereço http://www1.caixa.gov.br/gov/gov_social/municipal/programa_des_urbano/SINAPI/index.asp
 # Fonte: IBGE - Sistema Nacional de Pesquisa de Custos e Índices da Construção Civil
 [[tabelas]]
-sidra_tabela = "6586"
+tabela_sidra = "6586"
 variables = ["all"]
 territories = {1 = [], 2 = [], 3 = []}

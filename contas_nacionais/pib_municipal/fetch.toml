@@ -6,6 +6,6 @@
 #               bruto a preços correntes total e por atividade econômica, e
 #               respectivas participações - Referência 2010
 [[tabelas]]
-sidra_tabela = "5938"
+tabela_sidra = "5938"
 variables = ["37", "498", "513", "517", "525", "543", "6575"]
 territories = {6 = ["all"]}

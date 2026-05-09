@@ -10,9 +10,13 @@ Este repositório contém o conjunto padrão de definições (fetch + transform)
 
 - [O que é este repositório?](#-o-que-é-este-repositório)
 - [Pipelines Disponíveis](#-pipelines-disponíveis)
-  - [Economia e Preços](#economia-e-preços)
-  - [Demografia](#demografia)
+  - [Contas Nacionais](#contas-nacionais)
+  - [Preços](#preços)
+  - [Indústria](#indústria)
+  - [Comércio e Serviços](#comércio-e-serviços)
+  - [Trabalho](#trabalho)
   - [Agropecuária e Florestal](#agropecuária-e-florestal)
+  - [Demografia](#demografia)
 - [Instalação](#-instalação)
 - [Como Usar](#-como-usar)
 - [Estrutura de uma Pipeline](#-estrutura-de-uma-pipeline)
@@ -31,33 +35,75 @@ Ao instalar este repositório como um plugin, você ganha acesso imediato a uma 
 
 ## 📊 Pipelines Disponíveis
 
-Atualmente, o catálogo cobre **14 pesquisas essenciais** divididas em grandes temas:
+O catálogo cobre **33 pipelines** distribuídas em 7 grandes temas:
 
-### Economia e Preços
+### Contas Nacionais
+
 | ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
 |---|---|---|---|
 | `pib_municipal` | **PIB dos Municípios** | 5938 | `analytics.pib_municipal` |
+| `contas_nacionais_anual` | **Contas Nacionais Anuais** | 6784 | `analytics.cna` |
+| `contas_nacionais_trimestral` | **Contas Nacionais Trimestrais (CNT)** | 5932, 1620, 1621, 1846, 6612, 6613, 2072, 2205 | `analytics.cnt_taxas`, `cnt_indices`, `cnt_valores`, `cnt_contas_economicas`, `cnt_conta_financeira` |
+
+### Preços
+
+| ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
+|---|---|---|---|
 | `ipca` | **IPCA** (Inflação) | 7060, 1419, etc. | `analytics.ipca` |
 | `ipca15` | **IPCA-15** | 7062, 1705, etc. | `analytics.ipca15` |
 | `inpc` | **INPC** | 7063, 1100, etc. | `analytics.inpc` |
+| `ipp_categoria_economica` | **IPP** por Categorias Econômicas | — | `analytics.ipp_categoria_economica` |
+| `ipp_cnae` | **IPP** por CNAE | — | `analytics.ipp_cnae` |
+| `ipp_grupo_industrial` | **IPP** por Grupos Industriais | — | `analytics.ipp_grupo_industrial` |
+| `sinapi_custo_medio` | **SINAPI** - Custo médio m² | — | `analytics.sinapi_custo_medio` |
+| `sinapi_custo_projeto` | **SINAPI** - Custo de projeto | — | `analytics.sinapi_custo_projeto` |
+
+### Indústria
+
+| ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
+|---|---|---|---|
+| `pim_pf_brasil` | **PIM-PF Brasil** - Produção Física Industrial Nacional | 8885, 8886, 8887, 8888, 8889 | `analytics.pim_pf_brasil` |
+| `pim_pf_regional` | **PIM-PF Regional** - Produção Física por Região | 8888 | `analytics.pim_pf_regional` |
+
+### Comércio e Serviços
+
+| ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
+|---|---|---|---|
+| `pmc` | **PMC** - Pesquisa Mensal do Comércio | 8190, 8757, 8880, 8881, 8882, 8883, 8884 | `analytics.pmc_agregado`, `pmc_por_atividade` |
+| `pms` | **PMS** - Pesquisa Mensal de Serviços | 5906, 8163, 8688, 8693, 8694 | `analytics.pms_agregado`, `pms_por_segmento`, `pms_por_atividade` |
+
+### Trabalho
+
+| ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
+|---|---|---|---|
+| `pnadcm` | **PNAD Contínua Mensal** - Mercado de Trabalho | 6022, 6318, 5944, 6379, 6380 | `analytics.pnadcm_populacao`, `pnadcm_pia`, `pnadcm_ocupada`, `pnadcm_rendimento`, `pnadcm_massa_rendimento` |
+
+### Agropecuária e Florestal
+
+| ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
+|---|---|---|---|
+| `pam_lavouras_temporarias` | **PAM** (Lavouras Temporárias) | 839, 1000, etc. | `analytics.pam_lavouras_temporarias` |
+| `pam_lavouras_permanentes` | **PAM** (Lavouras Permanentes) | 1613 | `analytics.pam_lavouras_permanentes` |
+| `lspa` | **LSPA** - Levantamento Sistemático da Produção Agrícola | 6588 | `analytics.lspa` |
+| `ppm_rebanhos` | **PPM** (Efetivos dos Rebanhos) | 73, 3939 | `analytics.ppm_rebanhos` |
+| `ppm_producao` | **PPM** (Produção de Origem Animal) | 74, 3940 | `analytics.ppm_producao` |
+| `ppm_exploracao` | **PPM** (Vacas Ordenhadas e Ovinos Tosquiados) | 94, 95 | `analytics.ppm_exploracao` |
+| `abate` | **Abate** (Bovinos, Suínos e Frangos) | 1092, 1093, 1094 | `analytics.abate` |
+| `leite` | **Pesquisa Trimestral do Leite** | 1086 | `analytics.leite` |
+| `couro` | **Pesquisa Trimestral do Couro** | 1088, 1089, 1090 | `analytics.couro_adquirido`, `couro_terceiros_total`, `couro_curtido` |
+| `pog` | **POG** - Galinhas Poedeiras e Ovos | 7524 | `analytics.pog` |
+| `estoques` | **Pesquisa de Estoques** de Grãos | 254, 255, 259, 278, 911 | `analytics.estoques_estoque`, `estoques_capacidade_*` |
+| `pevs_producao` | **PEVS** (Extração Vegetal e Silvicultura) | 289, 291 | `analytics.pevs_producao` |
+| `pevs_area_florestal` | **PEVS** (Área de Florestas Plantadas) | 5930 | `analytics.pevs_area_florestal` |
 
 ### Demografia
+
 | ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
 |---|---|---|---|
 | `estimativa_populacao` | **Estimativas de População** | 6579 | `analytics.estimativa_populacao` |
 | `censo_populacao` | **Censo Demográfico** | 200 | `analytics.censo_populacao` |
 | `contagem_populacao` | **Contagem de População** | 305, 793 | `analytics.contagem_populacao` |
-
-### Agropecuária e Florestal
-| ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
-|---|---|---|---|
-| `pam_lavouras_temporarias` | **PAM** (Temporárias) | 839, 1000... | `analytics.pam_lavouras_temporarias` |
-| `pam_lavouras_permanentes` | **PAM** (Permanentes) | 1613 | `analytics.pam_lavouras_permanentes` |
-| `ppm_rebanhos` | **PPM** (Rebanhos) | 73, 3939 | `analytics.ppm_rebanhos` |
-| `ppm_producao` | **PPM** (Produção Animal) | 74, 3940 | `analytics.ppm_producao` |
-| `ppm_exploracao` | **PPM** (Aquicultura) | 94, 95 | `analytics.ppm_exploracao` |
-| `pevs_producao` | **PEVS** (Extração/Silvic.) | 289, 291 | `analytics.pevs_producao` |
-| `pevs_area_florestal` | **PEVS** (Área Florestal) | 5930 | `analytics.pevs_area_florestal` |
+| `populacao` | **População** — união de censo, contagem e estimativas | — | `analytics.populacao` |
 
 ---
 
@@ -109,7 +155,7 @@ id-da-pipeline/
 ```
 
 - **Fetch:** Utiliza o motor de download inteligente que evita requisições duplicadas.
-- **Transform:** Gera tabelas planas onde valores como `"..."`, `"-"` ou `"X"` são devidamente convertidos para `NULL`.
+- **Transform:** Gera tabelas no formato wide (pivot), onde cada variável SIDRA vira uma coluna. Valores como `"..."`, `"-"` ou `"X"` são convertidos para `NULL`.
 
 ---
 

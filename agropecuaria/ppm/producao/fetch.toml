@@ -3,14 +3,14 @@
 
 # Tabela 74 - Produção de origem animal, por tipo de produto
 [[tabelas]]
-sidra_tabela = "74"
+tabela_sidra = "74"
 variables = ["allxp"]
 territories = {6 = []}
 unnest_classifications = true
 
 # Tabela 3940 - Produção de origem animal, por tipo de produto (série histórica)
 [[tabelas]]
-sidra_tabela = "3940"
+tabela_sidra = "3940"
 variables = ["allxp"]
 territories = {6 = []}
 unnest_classifications = true

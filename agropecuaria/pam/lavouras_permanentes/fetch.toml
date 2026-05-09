@@ -4,7 +4,7 @@
 # Tabela 1613 - Área colhida, quantidade produzida, rendimento médio e valor da
 #               produção das lavouras permanentes
 [[tabelas]]
-sidra_tabela = "1613"
+tabela_sidra = "1613"
 variables = ["allxp"]
 territories = {6 = []}
 unnest_classifications = true

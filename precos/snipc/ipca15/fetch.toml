@@ -3,28 +3,28 @@
 
 # Tabela 1646 - IPCA15 - Variação mensal e peso mensal (de maio/2000 até julho/2006)
 [[tabelas]]
-sidra_tabela = "1646"
+tabela_sidra = "1646"
 variables = ["355", "357"]
 territories = {1 = [], 6 = [], 7 = []}
 classifications = {315 = []}
 
 # Tabela 1387 - IPCA15 - Variação mensal e peso mensal (de agosto/2006 até janeiro/2012)
 [[tabelas]]
-sidra_tabela = "1387"
+tabela_sidra = "1387"
 variables = ["355", "357"]
 territories = {1 = [], 6 = [], 7 = []}
 classifications = {315 = []}
 
 # Tabela 1705 - IPCA15 - Variação e peso mensal (de fevereiro/2012 até janeiro/2020)
 [[tabelas]]
-sidra_tabela = "1705"
+tabela_sidra = "1705"
 variables = ["355", "357"]
 territories = {1 = [], 6 = [], 7 = []}
 classifications = {315 = []}
 
 # Tabela 7062 - IPCA15 - Variação e peso mensal (a partir de fevereiro/2020)
 [[tabelas]]
-sidra_tabela = "7062"
+tabela_sidra = "7062"
 variables = ["355", "357"]
 territories = {1 = [], 6 = [], 7 = [], 71 = []}
 classifications = {315 = []}

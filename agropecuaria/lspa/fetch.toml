@@ -3,6 +3,6 @@
 
 # Tabela 6588 - Série histórica da estimativa anual da área plantada, área colhida, produção e rendimento médio dos produtos das lavouras
 [[tabelas]]
-sidra_tabela = "6588"
+tabela_sidra = "6588"
 variables = ["all"]
 territories = {3 = []}

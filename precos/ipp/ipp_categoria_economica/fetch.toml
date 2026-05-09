@@ -1,7 +1,7 @@
 
 # Tabela 6904 - Índice de Preços ao Produtor, por tipo de índice e grandes categorias econômicas (dezembro de 2018 = 100)
 [[tabelas]]
-sidra_tabela = "6904"
+tabela_sidra = "6904"
 variables = ["all"]
 territories = {1 = []}
 classifications = {543 = []}
