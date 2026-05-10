@@ -1,4 +1,6 @@
-# Sidra Standard Pipelines 🚀
+# sidra-pipelines: Catálogo de pipelines ETL para o SIDRA
+
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) ![Python](https://img.shields.io/badge/python-3.12+-blue.svg?style=flat-square)
 
 **O catálogo oficial de pipelines ETL para o motor [sidra-sql](https://github.com/Quantilica/sidra-sql).**
 
@@ -6,10 +8,10 @@ Este repositório contém o conjunto padrão de definições (fetch + transform)
 
 ---
 
-## 📋 Índice
+## Índice
 
-- [O que é este repositório?](#-o-que-é-este-repositório)
-- [Pipelines Disponíveis](#-pipelines-disponíveis)
+- [O que é este repositório?](#o-que-é-este-repositório)
+- [Pipelines Disponíveis](#pipelines-disponíveis)
   - [Contas Nacionais](#contas-nacionais)
   - [Preços](#preços)
   - [Indústria](#indústria)
@@ -17,15 +19,15 @@ Este repositório contém o conjunto padrão de definições (fetch + transform)
   - [Trabalho](#trabalho)
   - [Agropecuária e Florestal](#agropecuária-e-florestal)
   - [Demografia](#demografia)
-- [Instalação](#-instalação)
-- [Como Usar](#-como-usar)
-- [Estrutura de uma Pipeline](#-estrutura-de-uma-pipeline)
-- [Contribuindo](#-contribuindo)
-- [Licença](#-licença)
+- [Instalação](#instalação)
+- [Como Usar](#como-usar)
+- [Estrutura de uma Pipeline](#estrutura-de-uma-pipeline)
+- [Desenvolvimento](#desenvolvimento)
+- [Licença](#licença)
 
 ---
 
-## 🎯 O que é este repositório?
+## O que é este repositório?
 
 O `sidra-pipelines` funciona como um **hub de plugins** para o motor `sidra-sql`. Ele separa a lógica de execução (o motor) da declaração dos dados (os metadados das tabelas do IBGE e as queries SQL de transformação).
 
@@ -33,7 +35,7 @@ Ao instalar este repositório como um plugin, você ganha acesso imediato a uma 
 
 ---
 
-## 📊 Pipelines Disponíveis
+## Pipelines Disponíveis
 
 O catálogo cobre **33 pipelines** distribuídas em 7 grandes temas:
 
@@ -107,7 +109,7 @@ O catálogo cobre **33 pipelines** distribuídas em 7 grandes temas:
 
 ---
 
-## ⚙️ Instalação
+## Instalação
 
 Para utilizar estas pipelines, você deve ter o `sidra-sql` instalado. Com ele pronto, instale este catálogo usando a CLI:
 
@@ -117,25 +119,27 @@ sidra-sql plugin install https://github.com/Quantilica/sidra-pipelines.git --ali
 ```
 
 Para verificar se as pipelines foram registradas corretamente:
+
 ```bash
 sidra-sql plugin list
 ```
 
 ---
 
-## 🚀 Como Usar
+## Como Usar
 
 Para executar uma pipeline (baixar os dados + transformar em tabela analítica), use o comando `run`:
 
 ```bash
-# Exemplo: Executar a pipeline de PIB Municipal
+# Executar a pipeline de PIB Municipal
 sidra-sql run std pib_municipal
 
-# Exemplo: Executar a pipeline de IPCA
+# Executar a pipeline de IPCA
 sidra-sql run std ipca
 ```
 
 O `sidra-sql` cuidará automaticamente de:
+
 1. Consultar os metadados da tabela no IBGE.
 2. Baixar os dados em paralelo (com retry e cache).
 3. Carregar os dados brutos no schema `ibge_sidra`.
@@ -143,7 +147,7 @@ O `sidra-sql` cuidará automaticamente de:
 
 ---
 
-## 📂 Estrutura de uma Pipeline
+## Estrutura de uma Pipeline
 
 Cada pipeline dentro deste repositório segue o padrão exigido pelo motor:
 
@@ -157,25 +161,19 @@ id-da-pipeline/
 - **Fetch:** Utiliza o motor de download inteligente que evita requisições duplicadas.
 - **Transform:** Gera tabelas no formato wide (pivot), onde cada variável SIDRA vira uma coluna. Valores como `"..."`, `"-"` ou `"X"` são convertidos para `NULL`.
 
----
-
-## 🤝 Contribuindo
-
-Sentiu falta de alguma pesquisa do IBGE? Contribuições são muito bem-vindas!
-
-1. Faça um fork deste repositório.
-2. Crie uma nova pasta para a sua pesquisa.
-3. Adicione os arquivos `fetch.toml`, `transform.toml` e `transform.sql`.
-4. Registre a nova pipeline no `manifest.toml` da raiz.
-5. Envie um Pull Request!
-
 Para um guia detalhado de como criar novas pipelines, consulte o **[Guia de Criação de Pipelines](https://github.com/Quantilica/sidra-sql/blob/main/CREATING_PIPELINES.md)** no repositório principal.
 
 ---
 
-## 📄 Licença
+## Desenvolvimento
 
-Este projeto está licenciado sob a licença MIT — veja o arquivo [LICENSE](LICENSE) para detalhes.
+```bash
+git clone https://github.com/Quantilica/sidra-pipelines.git
+cd sidra-pipelines
+uv sync --dev
+uv run pytest
+```
 
----
-**Desenvolvido por [dankkom](https://github.com/dankkom)**
+## Licença
+
+MIT — veja [LICENSE](LICENSE).
