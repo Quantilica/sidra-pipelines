@@ -19,7 +19,7 @@ territories = {1 = []}
 # Tabela 8888 - Produção Física Industrial, por seções e atividades industriais
 [[tabelas]]
 tabela_sidra = "8888"
-territories = {1 = []}
+territories = {1 = [], 2 = [], 3 = []}
 
 
 # Tabela 8889 - Produção Física Industrial, por indicadores especiais
