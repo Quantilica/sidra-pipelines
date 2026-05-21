@@ -1,6 +1,0 @@
-[[table]]
-name        = "estimativa_populacao"
-schema      = "analytics"
-strategy    = "replace"
-sql         = "transform.sql"
-description = "Estimativas de população residente por município"
