@@ -1,6 +1,0 @@
-[[table]]
-name        = "inpc"
-schema      = "analytics"
-strategy    = "replace"
-sql         = "transform.sql"
-description = "INPC - variação e peso mensal por categoria e localidade"
