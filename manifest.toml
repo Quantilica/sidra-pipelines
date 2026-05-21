@@ -1,6 +1,6 @@
 name        = "Sidra Standard Pipelines"
 description = "Pipelines oficiais de referência para o motor sidra-sql, cobrindo Contas Nacionais, Preços, Indústria, Comércio, Serviços, Trabalho, Agropecuária e Florestal."
-version     = "2.0.0"
+version     = "3.0.0"
 
 [[pipeline]]
 id          = "pib_municipal"
@@ -8,99 +8,39 @@ description = "PIB dos Municípios"
 path        = "contas_nacionais/pib_municipal"
 
 [[pipeline]]
-id          = "ipp_categoria_economica"
-description = "IPP por Grandes Categorias Econômicas"
-path        = "precos/ipp/ipp_categoria_economica"
+id          = "ipp"
+description = "IPP - Índice de Preços ao Produtor (categoria econômica, CNAE e grupos industriais)"
+path        = "precos/ipp"
 
 [[pipeline]]
-id          = "ipp_cnae"
-description = "IPP da indústria geral, indústrias extrativas e indústrias de transformação e atividades"
-path        = "precos/ipp/ipp_cnae"
+id          = "sinapi"
+description = "SINAPI - Custo médio m² e custo de projeto"
+path        = "precos/sinapi"
 
 [[pipeline]]
-id          = "ipp_grupo_industrial"
-description = "IPP por Grupos Industriais selecionados"
-path        = "precos/ipp/ipp_grupo_industrial"
-
-[[pipeline]]
-id          = "sinapi_custo_medio"
-description = "SINAPI - Custo médio m²"
-path        = "precos/sinapi/custo_medio"
-
-[[pipeline]]
-id          = "sinapi_custo_projeto"
-description = "SINAPI - Custo de projeto"
-path        = "precos/sinapi/custo_projeto"
-
-[[pipeline]]
-id          = "ipca"
-description = "IPCA - Índice Nacional de Preços ao Consumidor Amplo"
-path        = "precos/snipc/ipca"
-
-[[pipeline]]
-id          = "ipca15"
-description = "IPCA-15 - Índice Nacional de Preços ao Consumidor Amplo 15"
-path        = "precos/snipc/ipca15"
-
-[[pipeline]]
-id          = "inpc"
-description = "INPC - Índice Nacional de Preços ao Consumidor"
-path        = "precos/snipc/inpc"
-
-[[pipeline]]
-id          = "censo_populacao"
-description = "Censo Demográfico"
-path        = "populacao/censo_populacao"
-
-[[pipeline]]
-id          = "contagem_populacao"
-description = "Contagem da População"
-path        = "populacao/contagem_populacao"
-
-[[pipeline]]
-id          = "estimativa_populacao"
-description = "Estimativas de População"
-path        = "populacao/estimapop"
+id          = "snipc"
+description = "SNIPC - INPC, IPCA, IPCA-15 e união (inflação)"
+path        = "precos/snipc"
 
 [[pipeline]]
 id          = "populacao"
-description = "População — união de censo, contagem e estimativas"
+description = "População - censo, contagem, estimativas e união"
 path        = "populacao"
 
 [[pipeline]]
-id          = "pam_lavouras_temporarias"
-description = "PAM - Produção Agrícola Municipal (Lavouras Temporárias)"
-path        = "agropecuaria/pam/lavouras_temporarias"
+id          = "pam"
+description = "PAM - Produção Agrícola Municipal (lavouras permanentes e temporárias)"
+path        = "agropecuaria/pam"
 
 [[pipeline]]
-id          = "pam_lavouras_permanentes"
-description = "PAM - Produção Agrícola Municipal (Lavouras Permanentes)"
-path        = "agropecuaria/pam/lavouras_permanentes"
+id          = "ppm"
+description = "PPM - Pesquisa Pecuária Municipal (rebanhos, produção e exploração)"
+path        = "agropecuaria/ppm"
 
 [[pipeline]]
-id          = "ppm_rebanhos"
-description = "PPM - Pesquisa Pecuária Municipal (Efetivos dos Rebanhos)"
-path        = "agropecuaria/ppm/rebanhos"
-
-[[pipeline]]
-id          = "ppm_producao"
-description = "PPM - Pesquisa Pecuária Municipal (Produção de Origem Animal)"
-path        = "agropecuaria/ppm/producao"
-
-[[pipeline]]
-id          = "ppm_exploracao"
-description = "PPM - Pesquisa Pecuária Municipal (Vacas Ordenhadas e Ovinos Tosquiados)"
-path        = "agropecuaria/ppm/exploracao"
-
-[[pipeline]]
-id          = "pevs_producao"
-description = "PEVS - Produção da Extração Vegetal e da Silvicultura"
-path        = "agropecuaria/pevs/producao"
-
-[[pipeline]]
-id          = "pevs_area_florestal"
-description = "PEVS - Área de Florestas Plantadas"
-path        = "agropecuaria/pevs/area_florestal"
+id          = "pevs"
+description = "PEVS - Produção da Extração Vegetal e Silvicultura (produção e área florestal)"
+path        = "agropecuaria/pevs"
 
 [[pipeline]]
 id          = "abate"
@@ -143,14 +83,9 @@ description = "Contas Nacionais Trimestrais (CNT)"
 path        = "contas_nacionais/trimestral"
 
 [[pipeline]]
-id          = "pim_pf_brasil"
-description = "PIM-PF Brasil - Produção Física Industrial Nacional"
-path        = "industria/pim-pf-brasil"
-
-[[pipeline]]
-id          = "pim_pf_regional"
-description = "PIM-PF Regional - Produção Física Industrial por Região"
-path        = "industria/pim-pf-regional"
+id          = "pim_pf"
+description = "PIM-PF - Produção Física Industrial (Brasil e regional)"
+path        = "industria/pim-pf"
 
 [[pipeline]]
 id          = "pmc"
