@@ -160,3 +160,24 @@ tabela_sidra = "7062"
 variables = ["355", "357"]
 territories = {1 = [], 6 = [], 7 = [], 71 = []}
 classifications = {315 = []}
+
+# --- Índice geral (número-índice base dezembro de 1993 = 100) ---
+# Séries históricas completas no nível Brasil, sem desagregação por subitem.
+
+# Tabela 1736 - INPC - número-índice e variações (Brasil)
+[[tabelas]]
+tabela_sidra = "1736"
+variables = ["2289", "44", "2290", "2291", "68", "2292"]
+territories = {1 = []}
+
+# Tabela 1737 - IPCA - número-índice e variações (Brasil)
+[[tabelas]]
+tabela_sidra = "1737"
+variables = ["2266", "63", "2263", "2264", "69", "2265"]
+territories = {1 = []}
+
+# Tabela 3065 - IPCA-15 - número-índice e variações (Brasil)
+[[tabelas]]
+tabela_sidra = "3065"
+variables = ["1117", "355", "1118", "1119", "356", "1120"]
+territories = {1 = []}

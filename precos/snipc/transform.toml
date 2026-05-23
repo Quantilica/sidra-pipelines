@@ -25,3 +25,10 @@ schema      = "analytics"
 strategy    = "replace"
 sql         = "inflacao.sql"
 description = "União de INPC, IPCA e IPCA-15"
+
+[[table]]
+name        = "inflacao_numero_indice"
+schema      = "analytics"
+strategy    = "replace"
+sql         = "inflacao_numero_indice.sql"
+description = "Número-índice geral (base dez/1993=100) e variações acumuladas, por índice (INPC/IPCA/IPCA-15) - Brasil"
