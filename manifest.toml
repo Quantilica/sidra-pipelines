@@ -1,6 +1,6 @@
 name        = "Sidra Standard Pipelines"
 description = "Pipelines oficiais de referência para o motor sidra-sql, cobrindo Contas Nacionais, Preços, Indústria, Comércio, Serviços, Trabalho, Agropecuária e Florestal."
-version     = "3.0.0"
+version     = "3.1.0"
 
 [[pipeline]]
 id          = "pib_municipal"

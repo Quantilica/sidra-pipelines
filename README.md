@@ -1,6 +1,6 @@
 # sidra-pipelines: Catálogo de pipelines ETL para o SIDRA
 
-![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) ![Python](https://img.shields.io/badge/python-3.12+-blue.svg?style=flat-square)
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) ![Python](https://img.shields.io/badge/python-3.12+-blue.svg?style=flat-square) ![Version](https://img.shields.io/badge/version-3.1.0-green.svg?style=flat-square)
 
 **O catálogo oficial de pipelines ETL para o motor [sidra-sql](https://github.com/Quantilica/sidra-sql).**
 
@@ -37,7 +37,9 @@ Ao instalar este repositório como um plugin, você ganha acesso imediato a uma 
 
 ## Pipelines Disponíveis
 
-O catálogo cobre **33 pipelines** distribuídas em 7 grandes temas:
+O catálogo cobre **20 pipelines** distribuídas em 7 grandes temas:
+
+Cada pipeline pode gerar **uma ou mais** tabelas analíticas (uma por entrada em seu `transform.toml`).
 
 ### Contas Nacionais
 
@@ -51,61 +53,48 @@ O catálogo cobre **33 pipelines** distribuídas em 7 grandes temas:
 
 | ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
 |---|---|---|---|
-| `ipca` | **IPCA** (Inflação) | 7060, 1419, etc. | `analytics.ipca` |
-| `ipca15` | **IPCA-15** | 7062, 1705, etc. | `analytics.ipca15` |
-| `inpc` | **INPC** | 7063, 1100, etc. | `analytics.inpc` |
-| `ipp_categoria_economica` | **IPP** por Categorias Econômicas | — | `analytics.ipp_categoria_economica` |
-| `ipp_cnae` | **IPP** por CNAE | — | `analytics.ipp_cnae` |
-| `ipp_grupo_industrial` | **IPP** por Grupos Industriais | — | `analytics.ipp_grupo_industrial` |
-| `sinapi_custo_medio` | **SINAPI** - Custo médio m² | — | `analytics.sinapi_custo_medio` |
-| `sinapi_custo_projeto` | **SINAPI** - Custo de projeto | — | `analytics.sinapi_custo_projeto` |
+| `snipc` | **SNIPC** — INPC, IPCA e IPCA-15 (Inflação) | 22, 58, 7060, 7062, 7063, 1736, 1737, 3065 … (séries históricas completas desde 1979) | `analytics.inpc`, `ipca`, `ipca15`, `inflacao`, `inflacao_numero_indice`, `inflacao_difusao`, `inflacao_hierarquia_subitem` |
+| `ipp` | **IPP** — Índice de Preços ao Produtor | 6904, 6903, 6723 | `analytics.ipp_categoria_economica`, `ipp_cnae`, `ipp_grupo_industrial` |
+| `sinapi` | **SINAPI** — Custos da Construção | 2296, 6586, 647 | `analytics.sinapi_custo_medio`, `sinapi_custo_projeto` |
 
 ### Indústria
 
 | ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
 |---|---|---|---|
-| `pim_pf_brasil` | **PIM-PF Brasil** - Produção Física Industrial Nacional | 8885, 8886, 8887, 8888, 8889 | `analytics.pim_pf_brasil` |
-| `pim_pf_regional` | **PIM-PF Regional** - Produção Física por Região | 8888 | `analytics.pim_pf_regional` |
+| `pim_pf` | **PIM-PF** — Produção Física Industrial (Brasil e regional) | 8885, 8886, 8887, 8888, 8889 | `analytics.pim_pf_brasil`, `pim_pf_regional` |
 
 ### Comércio e Serviços
 
 | ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
 |---|---|---|---|
-| `pmc` | **PMC** - Pesquisa Mensal do Comércio | 8190, 8757, 8880, 8881, 8882, 8883, 8884 | `analytics.pmc_agregado`, `pmc_por_atividade` |
-| `pms` | **PMS** - Pesquisa Mensal de Serviços | 5906, 8163, 8688, 8693, 8694 | `analytics.pms_agregado`, `pms_por_segmento`, `pms_por_atividade` |
+| `pmc` | **PMC** — Pesquisa Mensal do Comércio | 8190, 8757, 8880, 8881, 8882, 8883, 8884 | `analytics.pmc_agregado`, `pmc_por_atividade` |
+| `pms` | **PMS** — Pesquisa Mensal de Serviços | 5906, 8163, 8688, 8693, 8694, 8695 | `analytics.pms_agregado`, `pms_por_segmento`, `pms_por_atividade` |
 
 ### Trabalho
 
 | ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
 |---|---|---|---|
-| `pnadcm` | **PNAD Contínua Mensal** - Mercado de Trabalho | 6022, 6318, 5944, 6379, 6380 | `analytics.pnadcm_populacao`, `pnadcm_pia`, `pnadcm_ocupada`, `pnadcm_rendimento`, `pnadcm_massa_rendimento` |
+| `pnadcm` | **PNAD Contínua Mensal** — Mercado de Trabalho | 6022, 6318, 6381, 6390, 6392 … (24 tabelas) | `analytics.pnadcm_populacao`, `pnadcm_pia`, `pnadcm_ocupada`, `pnadcm_rendimento`, `pnadcm_massa_rendimento` |
 
 ### Agropecuária e Florestal
 
 | ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
 |---|---|---|---|
-| `pam_lavouras_temporarias` | **PAM** (Lavouras Temporárias) | 839, 1000, etc. | `analytics.pam_lavouras_temporarias` |
-| `pam_lavouras_permanentes` | **PAM** (Lavouras Permanentes) | 1613 | `analytics.pam_lavouras_permanentes` |
-| `lspa` | **LSPA** - Levantamento Sistemático da Produção Agrícola | 6588 | `analytics.lspa` |
-| `ppm_rebanhos` | **PPM** (Efetivos dos Rebanhos) | 73, 3939 | `analytics.ppm_rebanhos` |
-| `ppm_producao` | **PPM** (Produção de Origem Animal) | 74, 3940 | `analytics.ppm_producao` |
-| `ppm_exploracao` | **PPM** (Vacas Ordenhadas e Ovinos Tosquiados) | 94, 95 | `analytics.ppm_exploracao` |
+| `pam` | **PAM** — Produção Agrícola Municipal (lavouras permanentes e temporárias) | 839, 1000, 1001, 1002, 1612, 1613 | `analytics.pam_lavouras_permanentes`, `pam_lavouras_temporarias` |
+| `ppm` | **PPM** — Pesquisa Pecuária Municipal (rebanhos, produção e exploração) | 73, 74, 94, 95, 3939, 3940 | `analytics.ppm_rebanhos`, `ppm_producao`, `ppm_exploracao` |
+| `pevs` | **PEVS** — Extração Vegetal e Silvicultura (produção e área florestal) | 289, 291, 5930 | `analytics.pevs_producao`, `pevs_area_florestal` |
 | `abate` | **Abate** (Bovinos, Suínos e Frangos) | 1092, 1093, 1094 | `analytics.abate` |
 | `leite` | **Pesquisa Trimestral do Leite** | 1086 | `analytics.leite` |
 | `couro` | **Pesquisa Trimestral do Couro** | 1088, 1089, 1090 | `analytics.couro_adquirido`, `couro_terceiros_total`, `couro_curtido` |
-| `pog` | **POG** - Galinhas Poedeiras e Ovos | 7524 | `analytics.pog` |
-| `estoques` | **Pesquisa de Estoques** de Grãos | 254, 255, 259, 278, 911 | `analytics.estoques_estoque`, `estoques_capacidade_*` |
-| `pevs_producao` | **PEVS** (Extração Vegetal e Silvicultura) | 289, 291 | `analytics.pevs_producao` |
-| `pevs_area_florestal` | **PEVS** (Área de Florestas Plantadas) | 5930 | `analytics.pevs_area_florestal` |
+| `pog` | **POG** — Avicultura de Postura (Galinhas Poedeiras e Ovos) | 7524 | `analytics.pog` |
+| `lspa` | **LSPA** — Levantamento Sistemático da Produção Agrícola | 6588 | `analytics.lspa` |
+| `estoques` | **Pesquisa de Estoques** de Grãos | 254, 255, 259, 278, 911, 912, 5459, 5470 | `analytics.estoques_estoque`, `estoques_capacidade_*`, `estoques_armazens_convencionais`, `estoques_inativos` |
 
 ### Demografia
 
 | ID da Pipeline | Pesquisa | Tabelas SIDRA | Destino Analítico |
 |---|---|---|---|
-| `estimativa_populacao` | **Estimativas de População** | 6579 | `analytics.estimativa_populacao` |
-| `censo_populacao` | **Censo Demográfico** | 200 | `analytics.censo_populacao` |
-| `contagem_populacao` | **Contagem de População** | 305, 793 | `analytics.contagem_populacao` |
-| `populacao` | **População** — união de censo, contagem e estimativas | — | `analytics.populacao` |
+| `populacao` | **População** — censo, contagem, estimativas e união | 200, 305, 793, 4709, 6579 | `analytics.censo_populacao`, `contagem_populacao`, `estimativa_populacao`, `populacao` |
 
 ---
 
@@ -134,8 +123,8 @@ Para executar uma pipeline (baixar os dados + transformar em tabela analítica),
 # Executar a pipeline de PIB Municipal
 sidra-sql run std pib_municipal
 
-# Executar a pipeline de IPCA
-sidra-sql run std ipca
+# Executar a pipeline de inflação (INPC, IPCA e IPCA-15)
+sidra-sql run std snipc
 ```
 
 O `sidra-sql` cuidará automaticamente de:
@@ -153,13 +142,14 @@ Cada pipeline dentro deste repositório segue o padrão exigido pelo motor:
 
 ```text
 id-da-pipeline/
-├── fetch.toml      # Define quais tabelas, variáveis e períodos baixar
-├── transform.toml  # Define o nome da tabela destino e índices
-└── transform.sql   # Query SQL denormalizada para consumo final
+├── fetch.toml        # Define quais tabelas, variáveis e períodos baixar
+├── transform.toml    # Declara uma ou mais tabelas destino (nome, schema, índices)
+├── transform.sql     # Query SQL para a tabela destino (pipeline de saída única)
+└── *.sql             # Uma query por tabela destino (pipelines de múltiplas saídas)
 ```
 
 - **Fetch:** Utiliza o motor de download inteligente que evita requisições duplicadas.
-- **Transform:** Gera tabelas no formato wide (pivot), onde cada variável SIDRA vira uma coluna. Valores como `"..."`, `"-"` ou `"X"` são convertidos para `NULL`.
+- **Transform:** Cada entrada `[[table]]` do `transform.toml` aponta para um arquivo `.sql`. Gera tabelas no formato wide (pivot), onde cada variável SIDRA vira uma coluna. Valores como `"..."`, `"-"` ou `"X"` são convertidos para `NULL`.
 
 Para um guia detalhado de como criar novas pipelines, consulte o **[Guia de Criação de Pipelines](https://github.com/Quantilica/sidra-sql/blob/main/CREATING_PIPELINES.md)** no repositório principal.
 
