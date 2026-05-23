@@ -32,3 +32,17 @@ schema      = "analytics"
 strategy    = "replace"
 sql         = "inflacao_numero_indice.sql"
 description = "Número-índice geral (base dez/1993=100) e variações acumuladas, por índice (INPC/IPCA/IPCA-15) - Brasil"
+
+[[table]]
+name        = "inflacao_difusao"
+schema      = "analytics"
+strategy    = "replace"
+sql         = "inflacao_difusao.sql"
+description = "Índice de difusão da inflação - proporção de subitens com variação positiva, por índice e localidade"
+
+[[table]]
+name        = "inflacao_hierarquia_subitem"
+schema      = "analytics"
+strategy    = "replace"
+sql         = "inflacao_hierarquia_subitem.sql"
+description = "Hierarquia de classificação da inflação: subitem -> item -> subgrupo -> grupo (códigos e nomes)"
