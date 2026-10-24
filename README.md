@@ -1,5 +1,16 @@
 # sidra-pipelines: Catálogo de pipelines ETL para o SIDRA
 
+> [!WARNING]
+> **REPOSITÓRIO DEPRECIADO / DEPRECATED**  
+> O catálogo `sidra-pipelines` foi descontinuado e consolidado no catálogo declarativo unificado [**`quantilica-pipelines`**](https://github.com/Quantilica/quantilica-pipelines).  
+> Todas as 20 pipelines foram migradas e são executadas através do motor unificado [**`quantilica-sql`**](https://github.com/Quantilica/quantilica-sql).  
+> Para instalar e utilizar o novo catálogo unificado:
+> ```bash
+> quantilica-sql plugin install https://github.com/Quantilica/quantilica-pipelines.git --alias std
+> quantilica-sql run std <pipeline>
+> ```
+
+
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) ![Python](https://img.shields.io/badge/python-3.12+-blue.svg?style=flat-square) ![Version](https://img.shields.io/badge/version-3.1.0-green.svg?style=flat-square)
 
 **O catálogo oficial de pipelines ETL para o motor [sidra-sql](https://github.com/Quantilica/sidra-sql).**
